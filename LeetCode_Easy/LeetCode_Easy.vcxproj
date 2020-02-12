@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="implementStrStr.cpp" />
     <ClCompile Include="longestCPrefix.cpp" />
     <ClCompile Include="palindromeNum.cpp" />
     <ClCompile Include="removeDuplicates.cpp" />

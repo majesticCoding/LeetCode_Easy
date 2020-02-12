@@ -19,22 +19,3 @@ int removeElement(vector<int>& nums, int val) {
 
 	return nums.size();
 }
-
-int main() {
-	vector<int> nums;
-	int tmp;
-	string buffer;
-
-	getline(cin, buffer);
-	istringstream iss(buffer);
-	while (iss >> tmp) {
-		nums.push_back(tmp);
-	}
-
-	int val;
-	cin >> val;
-	cout << removeElement(nums, val);
-
-	_getch();
-	return 0;
-}
