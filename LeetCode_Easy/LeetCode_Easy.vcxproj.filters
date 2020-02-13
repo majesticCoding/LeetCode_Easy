@@ -42,5 +42,8 @@
     <ClCompile Include="implementStrStr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="searchInsert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

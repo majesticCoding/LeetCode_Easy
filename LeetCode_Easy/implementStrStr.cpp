@@ -36,13 +36,3 @@ int strStr(string haystack, string needle) {
 
 	return -1;
 }
-
-
-int main() {
-
-	string haystack, needle;
-	cin >> haystack >> needle;
-	cout << strStr(haystack, needle);
-	_getch();
-	return 0;
-}
