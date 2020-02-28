@@ -14,7 +14,7 @@ bool isValid(string s) {
 	for (int i = 0; i < s.size(); i++) {
 		if (brackets.size() == 0 && 
 			(s[i] == '}' || s[i] == ']' || s[i] == ')')) {
-			return false;
+			return false;  
 		}
 		if (s[i] == '{' || s[i] == '[' || s[i] == '(') {
 			brackets.push(s[i]);

@@ -33,23 +33,3 @@ int searchInsert(vector<int>& nums, int target) {
 	return mid;
 }
 
-
-int main() {
-	vector<int> nums;
-	string buffer;
-	int target;
-
-	int tmp;
-	getline(cin, buffer);
-	istringstream iss(buffer);
-	while (iss >> tmp) {
-		nums.push_back(tmp);
-	}
-
-	cin >> target;
-	
-	cout << searchInsert(nums, target);
-	
-	_getch();
-	return 0;
-}

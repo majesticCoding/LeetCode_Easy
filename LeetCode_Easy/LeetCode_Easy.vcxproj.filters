@@ -45,5 +45,8 @@
     <ClCompile Include="searchInsert.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="countAndSay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
