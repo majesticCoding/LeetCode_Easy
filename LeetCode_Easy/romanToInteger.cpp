@@ -28,6 +28,8 @@ int decoder(char c) {
 			n = 500; break;
 		case 'M':
 			n = 1000; break;
+		default:
+			n = 0; break;
 	}
 	return n;
 }
@@ -35,18 +37,28 @@ int decoder(char c) {
 int romanToInt(string s) {
 	int n = 0;
 
-	if(s.size() == 1) { return decoder(s[0]); }
+	if (s.size() == 1) { return decoder(s[0]); }
 
-	if ((int)s.find("IV") != -1) { n += 4; s.erase(s.find("IV"), 2); }
-	if ((int)s.find("IX") != -1) { n += 9; s.erase(s.find("IX"), 2); }
-	if ((int)s.find("XL") != -1) { n += 40; s.erase(s.find("XL"), 2); }
-	if ((int)s.find("XC") != -1) { n += 90; s.erase(s.find("XC"), 2); }
-	if ((int)s.find("CD") != -1) { n += 400; s.erase(s.find("CD"), 2); }
-	if ((int)s.find("CM") != -1) { n += 900; s.erase(s.find("CM"), 2); }
+	int pos = 0;
+	if ((pos = (int)s.find("IV")) != -1) { n += 4; s[pos] = ' '; s[pos+1] = ' '; }
+	if ((pos = (int)s.find("IX")) != -1) { n += 9; s[pos] = ' '; s[pos + 1] = ' '; }
+	if ((pos = (int)s.find("XL")) != -1) { n += 40; s[pos] = ' '; s[pos + 1] = ' '; }
+	if ((pos = (int)s.find("XC")) != -1) { n += 90; s[pos] = ' '; s[pos + 1] = ' '; }
+	if ((pos = (int)s.find("CD")) != -1) { n += 400; s[pos] = ' '; s[pos + 1] = ' '; }
+	if ((pos = (int)s.find("CM")) != -1) { n += 900; s[pos] = ' '; s[pos + 1] = ' '; }
 
 	for (int i = 0; i < s.size(); i++) {
 		n += decoder(s[i]);
 	}
 
 	return n;
+}
+
+int main() {
+	string s;
+	cin >> s;
+	cout << romanToInt(s);
+	//cout << s.find("IV");
+	_getch();
+	return 0;
 }

@@ -40,9 +40,3 @@ string longestCommonPrefix(vector<string>& strs) {
 	return resultPrefix;
 }
 
-int main() {
-	vector<string> a = {"flower", "flow", "flash"};
-	cout << longestCommonPrefix(a);
-	_getch();
-	return 0;
-}
