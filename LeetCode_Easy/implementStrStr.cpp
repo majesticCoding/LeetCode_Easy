@@ -86,12 +86,3 @@ int strStr2(string haystack, string needle) {
 	return -1;
 }
 
-int main() {
-	//string haystack, needle;
-	//cin >> haystack >> needle;
-	cout << strStr("abcabeabcabcabd", "abcabd") << endl;
-	//cout << strStr("aaaaaaal", "aaaal") << endl;
-	//cout << strStr("mississippi", "issip") << endl;
-	_getch();
-	return 0;
-}
