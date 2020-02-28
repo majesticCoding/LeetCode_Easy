@@ -24,6 +24,7 @@ string longestCommonPrefix(vector<string>& strs) {
 		for (int j = 1; j < strs.size(); j++) {
 			if (strs[0][pos] != strs[j][pos]) {
 				stopFlag = true;
+				break;
 			}
 		}
 
