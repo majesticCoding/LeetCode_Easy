@@ -10,18 +10,41 @@ string countAndSay(int n) {
 		return "";
 	}
 
-	string result = "1";
+	string result;
 	if (n == 1) {
+		result = "1";
+		return result;
+	}
+	else if (n == 2) {
+		result = "11";
 		return result;
 	}
 
-	while (n > 1) {
-		string currentStr = "";
-
+	int frequency = 0, pos = 0, counter = 0;
+	result = "11";
+	while (n >= 3) {
+		string currentStr = result;
+		result = "";
+		for (int i = 0; i < currentStr.length(); i++) {
+			if (currentStr[i] == currentStr[pos]) {
+				while (pos < currentStr.length() && currentStr[i] == currentStr[pos]) {
+					frequency++; pos++;
+				}
+				result.push_back(static_cast<char>(frequency + 48));
+				result.push_back(static_cast<char>(currentStr[i]));
+				i += frequency - 1;
+				frequency = 0;
+			}
+		}
+		pos = 0;
 		n--;
 	}
 
 	return result;
 }
 
-
+int main() {
+	cout << countAndSay(11);
+	_getch();
+	return 0;
+}
