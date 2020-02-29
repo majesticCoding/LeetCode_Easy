@@ -12,15 +12,13 @@ string countAndSay(int n) {
 
 	string result;
 	if (n == 1) {
-		result = "1";
-		return result;
+		return "1";
 	}
 	else if (n == 2) {
-		result = "11";
-		return result;
+		return "11";
 	}
 
-	int frequency = 0, pos = 0, counter = 0;
+	int frequency = 0, pos = 0;
 	result = "11";
 	while (n >= 3) {
 		string currentStr = result;
