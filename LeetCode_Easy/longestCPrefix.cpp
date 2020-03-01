@@ -5,10 +5,6 @@
 
 using namespace std;
 
-/*
-TODO: think how to make unlimited enter of strings
-*/
-
 string longestCommonPrefix(vector<string>& strs) {
 	if (strs.size() == 0) {
 		return "";

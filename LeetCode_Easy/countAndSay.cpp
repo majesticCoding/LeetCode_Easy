@@ -40,9 +40,3 @@ string countAndSay(int n) {
 
 	return result;
 }
-
-int main() {
-	cout << countAndSay(11);
-	_getch();
-	return 0;
-}

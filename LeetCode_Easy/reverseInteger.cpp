@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 int reverseInt(int x) {
 	int result = 0, multiplier = 1;
 
