@@ -28,19 +28,3 @@ int maxSubArray(vector<int>& nums) {
 	return maxS;
 }
 
-int main() {
-	vector<int> nums;
-	string buffer;
-	int target;
-
-	int tmp;
-	getline(cin, buffer);
-	istringstream iss(buffer);
-	while (iss >> tmp) {
-		nums.push_back(tmp); 
-	}
-
-	cout << maxSubArray(nums);
-	_getch();
-	return 0;
-}

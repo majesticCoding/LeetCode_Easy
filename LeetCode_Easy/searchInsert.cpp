@@ -25,9 +25,6 @@ int searchInsert(vector<int>& nums, int target) {
 	if (target > nums[mid]) {
 		return mid + 1;
 	}
-	else if (target < nums[mid] && mid > 0) {
-		return mid;
-	}
 
 	return mid;
 }
