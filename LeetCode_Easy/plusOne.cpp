@@ -22,23 +22,3 @@ vector<int> plusOne(vector<int>& digits) {
 	return digits;
 }
 
-int main() {
-
-	vector<int> nums;
-	string buffer;
-	int target;
-
-	int tmp;
-	getline(cin, buffer);
-	istringstream iss(buffer);
-	while (iss >> tmp) {
-		nums.push_back(tmp);
-	}
-
-	nums = plusOne(nums);
-	for (int i = 0; i < nums.size(); i++) {
-		cout << nums[i] << " ";
-	}
-	_getch();
-	return 0;
-}
