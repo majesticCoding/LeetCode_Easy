@@ -26,11 +26,3 @@ int mySqrt(int x) {
     }
     return (int)root;
 }
-
-int main() {
-	int a;
-	cin >> a;
-	cout << mySqrt(a);
-	_getch();
-	return 0;
-}
