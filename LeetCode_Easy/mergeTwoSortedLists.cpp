@@ -4,6 +4,7 @@
 #include <vector>
 #include <conio.h>
 #include <string>
+#include "singlyLinkedListAPI.h"
 
 using namespace std;
 
@@ -12,33 +13,6 @@ struct ListNode {
 	ListNode *next;
 	ListNode(int x) : val(x), next(NULL) {}
 };
-
-void pushFront(ListNode** head, int val) {
-	ListNode *tmp = new ListNode(val);
-	tmp->next = *head;
-	*head = tmp;
-}
-
-void pushBack(ListNode **head, int val) {
-	ListNode *tmp = new ListNode(val);
-	if (*head == NULL) {
-		*head = tmp;
-		return;
-	}
-
-	ListNode *save = *head;
-	while (save->next != NULL) {
-		save = save->next;
-	}
-	save->next = tmp;
-}
-
-void printList(ListNode *head) {
-	while (head != NULL) {
-		cout << head->val << " ";
-		head = head->next;
-	}
-}
 
 ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) {
 	ListNode *merged = NULL;
