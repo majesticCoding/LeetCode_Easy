@@ -41,15 +41,40 @@ void printList(ListNode *head) {
 }
 
 ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) {
-	
+	ListNode *merged = NULL;
+
+	if (l1 == NULL && l2 == NULL) {
+		return NULL;
+	}
+
+	while (l1 && l2) {
+		if (l1->val > l2->val) {
+			pushBack(&merged, l2->val);
+			l2 = l2->next;
+		}
+		else {
+			pushBack(&merged, l1->val);
+			l1 = l1->next;
+		}
+	}
+	while (l1) {
+		pushBack(&merged, l1->val);
+		l1 = l1->next;
+	}
+	while (l2) {
+		pushBack(&merged, l2->val);
+		l2 = l2->next;
+	}
+	return merged;
 }
 
 int main() {
 
 	ListNode* l1 = NULL;
 	ListNode* l2 = NULL;
+	ListNode* merged = NULL;
 
-	string buffer, buffer2;
+	string buffer;
 	int tmp;
 
 	cout << "enter the 1st list: ";
@@ -67,6 +92,10 @@ int main() {
 		pushBack(&l2, tmp);
 	}
 	printList(l2);
+	
+	cout << endl;
+	merged = mergeTwoLists(l1, l2);
+	printList(merged);
 
 	_getch();
 	return 0;
