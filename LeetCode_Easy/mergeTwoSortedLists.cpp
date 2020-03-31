@@ -42,6 +42,7 @@ ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) {
 	return merged;
 }
 
+/*
 int main() {
 
 	ListNode* l1 = NULL;
@@ -73,4 +74,4 @@ int main() {
 
 	_getch();
 	return 0;
-}
+}*/
