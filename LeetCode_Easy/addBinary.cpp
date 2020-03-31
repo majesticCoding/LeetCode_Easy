@@ -60,10 +60,10 @@ string addBinary(string a, string b) {
 	return sum;
 }
 
-int main() {
+/*int main() {
 	string a, b;
 	cin >> a >> b;
 	cout << addBinary(a, b);
 	_getch();
 	return 0;
-}
+}*/
