@@ -19,8 +19,3 @@ int climbStairs(int n) {
 	return result;
 }
 
-int main() {
-	cout << climbStairs(5);
-	_getch();
-	return 0;
-}

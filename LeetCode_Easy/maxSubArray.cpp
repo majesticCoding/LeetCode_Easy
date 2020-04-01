@@ -14,7 +14,7 @@ int max(int a, int b) {
 int maxSubArray(vector<int>& nums) {
 	if (nums.size() == 0) {
 		return 0;
-	}
+	} 
 
 	int maxS = nums[0];
 	int tmpS = nums[0];
