@@ -7,13 +7,6 @@
 
 using namespace std;
 
-struct TreeNode {
-	int val;
-	TreeNode *left;
-	TreeNode *right;
-	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-
 void array2Tree(TreeNode** root, vector<int> nums, int index, int size) {
 	if (index < size) {
 		*root = new TreeNode(nums[index]);
@@ -53,13 +46,14 @@ bool isSameTree(TreeNode* p, TreeNode* q) {
 	if (!p && !q) {
 		return true;
 	}
+	cout << p->val << " " << q->val << endl;
 	if (p->val != q->val) {
 		return false;
 	}
 	return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
 }
 
-int main() {
+/*int main() {
 
 	string buffer;
 	int tmp;
@@ -75,7 +69,7 @@ int main() {
 	array2Tree(&t1, a, 0, a.size());
 
 	TreeNode* t2 = NULL;
-	cout << endl << "enter the 2nd tree: ";
+	cout << "enter the 2nd tree: ";
 	getline(cin, buffer);
 	a.clear();
 	istringstream iss2(buffer);
@@ -88,4 +82,4 @@ int main() {
 
 	_getch();
 	return 0;
-}
+}*/
