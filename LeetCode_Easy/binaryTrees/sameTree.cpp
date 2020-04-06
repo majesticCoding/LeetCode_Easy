@@ -16,7 +16,7 @@ void array2Tree(TreeNode** root, vector<int> nums, int index, int size) {
 }
 
 void inOrderTraversal(TreeNode* root) {
-	if (root != NULL) {
+	if (root != nullptr) {
 		inOrderTraversal(root->left);
 		cout << root->val << " ";
 		inOrderTraversal(root->right);
@@ -24,7 +24,7 @@ void inOrderTraversal(TreeNode* root) {
 }
 
 void preOrderTraversal(TreeNode* root) {
-	if (root != NULL) {
+	if (root != nullptr) {
 		cout << root->val << " ";
 		preOrderTraversal(root->left);
 		preOrderTraversal(root->right);
@@ -32,7 +32,7 @@ void preOrderTraversal(TreeNode* root) {
 }
 
 void postOrderTraversal(TreeNode* root) {
-	if (root != NULL) {
+	if (root != nullptr) {
 		postOrderTraversal(root->left);
 		postOrderTraversal(root->right);
 		cout << root->val << " ";
@@ -40,7 +40,7 @@ void postOrderTraversal(TreeNode* root) {
 }
 
 bool isSameTree(TreeNode* p, TreeNode* q) { 
-	if ((p != NULL && q == NULL) || (q != NULL && p == NULL)) {
+	if ((p != nullptr && q == nullptr) || (q != nullptr && p == nullptr)) {
 		return false;
 	}
 	if (!p && !q) {
@@ -58,7 +58,7 @@ bool isSameTree(TreeNode* p, TreeNode* q) {
 	string buffer;
 	int tmp;
 
-	TreeNode* t1 = NULL;
+	TreeNode* t1 = nullptr;
 	cout << "enter the 1st tree: ";
 	getline(cin, buffer);
 	vector<int> a;
@@ -68,7 +68,7 @@ bool isSameTree(TreeNode* p, TreeNode* q) {
 	}
 	array2Tree(&t1, a, 0, a.size());
 
-	TreeNode* t2 = NULL;
+	TreeNode* t2 = nullptr;
 	cout << "enter the 2nd tree: ";
 	getline(cin, buffer);
 	a.clear();

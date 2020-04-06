@@ -8,7 +8,7 @@
 using namespace std;
 
 bool isTreeAMirror(TreeNode* p, TreeNode* q) {
-	if ((p != NULL && q == NULL) || (q != NULL && p == NULL)) {
+	if ((p != nullptr && q == nullptr) || (q != nullptr && p == nullptr)) {
 		return false;
 	}
 	if (!p && !q) {
@@ -21,18 +21,17 @@ bool isTreeAMirror(TreeNode* p, TreeNode* q) {
 }
 
 bool isSymmetric(TreeNode* root) {
-	if (root == NULL) {
+	if (root == nullptr) {
 		return true;
 	}
 	return isTreeAMirror(root->left, root->right);
 }
 
 /*int main() {
-
 	string buffer;
 	int tmp;
 
-	TreeNode* t = NULL;
+	TreeNode* t = nullptr;
 	cout << "enter the tree: ";
 	getline(cin, buffer);
 	vector<int> a;

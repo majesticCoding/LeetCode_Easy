@@ -8,7 +8,7 @@
 using namespace std;
 
 int maxDepth(TreeNode* root) {
-	if (root == NULL) {
+	if (root == nullptr) {
 		return 0;
 	}
 	int leftDepth = maxDepth(root->left);
@@ -17,12 +17,12 @@ int maxDepth(TreeNode* root) {
 	return leftDepth > rightDepth ? leftDepth + 1 : rightDepth + 1;
 }
 
-int main() {
+/*int main() {
 
 	string buffer;
 	int tmp;
 
-	TreeNode* t = NULL;
+	TreeNode* t = nullptr;
 	cout << "enter the tree: ";
 	getline(cin, buffer);
 	vector<int> a;
@@ -34,4 +34,4 @@ int main() {
 	cout << maxDepth(t);
 	_getch();
 	return 0;
-}
+}*/

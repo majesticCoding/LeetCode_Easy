@@ -57,7 +57,7 @@ int strStr(string haystack, string needle) {
 int strStr2(string haystack, string needle) {
 
 	if (!needle.size()) {
-		return NULL;
+		return 0;
 	}
 
 	if (needle.size() > haystack.size()) {

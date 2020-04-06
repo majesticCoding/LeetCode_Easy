@@ -1,6 +1,5 @@
 #include <iostream>
 #include <sstream>
-#include <map>
 #include <vector>
 #include <conio.h>
 #include <string>
@@ -11,14 +10,14 @@ using namespace std;
 struct ListNode {
 	int val;
 	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
+	ListNode(int x) : val(x), next(nullptr) {}
 };
 
 ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) {
-	ListNode *merged = NULL;
+	ListNode *merged = nullptr;
 
-	if (l1 == NULL && l2 == NULL) {
-		return NULL;
+	if (l1 == nullptr && l2 == nullptr) {
+		return nullptr;
 	}
 
 	while (l1 && l2) {
@@ -45,9 +44,9 @@ ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) {
 /*
 int main() {
 
-	ListNode* l1 = NULL;
-	ListNode* l2 = NULL;
-	ListNode* merged = NULL;
+	ListNode* l1 = nullptr;
+	ListNode* l2 = nullptr;
+	ListNode* merged = nullptr;
 
 	string buffer;
 	int tmp;

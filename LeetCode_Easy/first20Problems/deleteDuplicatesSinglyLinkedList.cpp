@@ -1,6 +1,5 @@
 #include <iostream>
 #include <sstream>
-#include <map>
 #include <vector>
 #include <conio.h>
 #include <string>
@@ -11,7 +10,7 @@ using namespace std;
 struct ListNode {
 	int val;
 	ListNode *next;
-	ListNode(int x) : val(x), next(NULL) {}
+	ListNode(int x) : val(x), next(nullptr) {}
 };
 
 void pushFront(ListNode** head, int val) {
@@ -22,27 +21,27 @@ void pushFront(ListNode** head, int val) {
 
 void pushBack(ListNode** head, int val) {
 	ListNode *tmp = new ListNode(val);
-	if (*head == NULL) {
+	if (*head == nullptr) {
 		*head = tmp;
 		return;
 	}
 
 	ListNode *save = *head;
-	while (save->next != NULL) {
+	while (save->next != nullptr) {
 		save = save->next;
 	}
 	save->next = tmp;
 }
 
 void printList(ListNode* head) {
-	while (head != NULL) {
+	while (head != nullptr) {
 		cout << head->val << " ";
 		head = head->next;
 	}
 }
 
 void popFront(ListNode** head) {
-	if (*head == NULL) {
+	if (*head == nullptr) {
 		return;
 	}
 	ListNode* tmp = *head;
@@ -51,22 +50,22 @@ void popFront(ListNode** head) {
 }
 
 void popBack(ListNode** head) {
-	if (*head == NULL) {
+	if (*head == nullptr) {
 		return;
 	}
 
 	ListNode* tmp = *head;
-	if ((*head)->next == NULL) {
+	if ((*head)->next == nullptr) {
 		*head = (*head)->next;
 		free(tmp);
 		return;
 	}
 
-	while ((*head)->next->next != NULL) {
+	while ((*head)->next->next != nullptr) {
 		*head = (*head)->next;
 	}
 	ListNode* removingElem = (*head)->next;
-	(*head)->next = NULL;
+	(*head)->next = nullptr;
 	free(removingElem);
 	*head = tmp;
 }
@@ -74,7 +73,7 @@ void popBack(ListNode** head) {
 int getListSize(ListNode** head) {
 	ListNode* tmp = *head;
 	int counter = 0;
-	while (tmp != NULL) {
+	while (tmp != nullptr) {
 		counter++;
 		tmp = tmp->next;
 	}
@@ -86,7 +85,7 @@ int getListSize(ListNode** head) {
 TODO: implement it
 */
 void removeByPos(ListNode** head, int pos) {
-	if (*head == NULL) {
+	if (*head == nullptr) {
 		return;
 	}
 
@@ -98,7 +97,7 @@ void removeByPos(ListNode** head, int pos) {
 
 ListNode* deleteDuplicates(ListNode* head) {
 
-	if (head == NULL) {
+	if (head == nullptr) {
 		return head;
 	}
 
@@ -107,7 +106,7 @@ ListNode* deleteDuplicates(ListNode* head) {
 	}
 
 	ListNode* save = head;
-	while (head->next != NULL) {
+	while (head->next != nullptr) {
 		if (head->val == head->next->val) {
 			ListNode* tmp = head->next;
 			head->next = head->next->next;
@@ -124,7 +123,7 @@ ListNode* deleteDuplicates(ListNode* head) {
 
 /*int main() {
 
-	ListNode* l = NULL;
+	ListNode* l = nullptr;
 	string buffer;
 	int tmp;
 

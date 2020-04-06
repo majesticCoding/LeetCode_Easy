@@ -16,3 +16,5 @@ void inOrderTraversal(TreeNode* root);
 void preOrderTraversal(TreeNode* root);
 void postOrderTraversal(TreeNode* root);
 bool isSameTree(TreeNode* p, TreeNode* q);
+bool isSymmetric(TreeNode* root);
+int maxDepth(TreeNode* root);
