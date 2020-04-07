@@ -9,13 +9,18 @@ int climbStairs(int n) {
 		return n;
 	}
 
-	int* A = new int[n];
-	A[0] = 1; A[1] = 2;
+	int t1 = 1, t2 = 2;
+	int result = 0;
 	for (int i = 2; i < n; i++) {
-		A[i] = A[i - 1] + A[i - 2];
+		result = t1 + t2;
+		t1 = t2;
+		t2 = result;
 	}
-	int result = A[n - 1];
-	delete A;
 	return result;
 }
 
+int main() {
+	cout << climbStairs(5);
+	_getch();
+	return 0;
+}

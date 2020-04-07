@@ -32,7 +32,7 @@ vector<vector<int>> levelOrderBottom(TreeNode* root) {
 	return level;
 }
 
-int main() {
+/*int main() {
 
 	string buffer;
 	int tmp;
@@ -51,4 +51,4 @@ int main() {
 	cout << endl;
 	_getch();
 	return 0;
-}
+}*/
