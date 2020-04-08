@@ -47,7 +47,7 @@ int popFront(ListNode** head) {
 	ListNode* tmp = *head;
 	int popedVal = tmp->val;
 	*head = (*head)->next;
-	free(tmp);
+	delete tmp;
 
 	return popedVal;
 }
@@ -62,7 +62,7 @@ int popBack(ListNode** head) {
 	if ((*head)->next == nullptr) {
 		popedVal = (*head)->val;
 		*head = (*head)->next;
-		free(tmp);
+		delete tmp;
 		return popedVal;
 	}
 
@@ -72,7 +72,7 @@ int popBack(ListNode** head) {
 	ListNode* removingElem = (*head)->next;
 	popedVal = (*head)->next->val;
 	(*head)->next = nullptr;
-	free(removingElem);
+	delete removingElem;
 	*head = tmp;
 
 	return popedVal;
