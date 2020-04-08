@@ -26,11 +26,11 @@ void pushBack(ListNode** head, int val) {
 		return;
 	}
 
-	ListNode *save = *head;
-	while (save->next != nullptr) {
-		save = save->next;
+	ListNode *tail = *head;
+	while (tail->next != nullptr) {
+		tail = tail->next;
 	}
-	save->next = tmp;
+	tail->next = tmp;
 }
 
 void printList(ListNode* head) {
@@ -40,34 +40,42 @@ void printList(ListNode* head) {
 	}
 }
 
-void popFront(ListNode** head) {
+int popFront(ListNode** head) {
 	if (*head == nullptr) {
-		return;
+		return NULL;
 	}
 	ListNode* tmp = *head;
+	int popedVal = tmp->val;
 	*head = (*head)->next;
 	free(tmp);
+
+	return popedVal;
 }
 
-void popBack(ListNode** head) {
+int popBack(ListNode** head) {
 	if (*head == nullptr) {
-		return;
+		return NULL;
 	}
 
+	int popedVal;
 	ListNode* tmp = *head;
 	if ((*head)->next == nullptr) {
+		popedVal = (*head)->val;
 		*head = (*head)->next;
 		free(tmp);
-		return;
+		return popedVal;
 	}
 
 	while ((*head)->next->next != nullptr) {
 		*head = (*head)->next;
 	}
 	ListNode* removingElem = (*head)->next;
+	popedVal = (*head)->next->val;
 	(*head)->next = nullptr;
 	free(removingElem);
 	*head = tmp;
+
+	return popedVal;
 }
 
 int getListSize(ListNode** head) {
@@ -137,7 +145,6 @@ ListNode* deleteDuplicates(ListNode* head) {
 	cout << endl <<"size: " << getListSize(&l) << endl;
 	ListNode* l2 = deleteDuplicates(l);
 	printList(l2);
-
 	_getch();
 	return 0;
 }*/

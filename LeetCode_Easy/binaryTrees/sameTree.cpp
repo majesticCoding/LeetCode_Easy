@@ -53,6 +53,13 @@ bool isSameTree(TreeNode* p, TreeNode* q) {
 	return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
 }
 
+int getSumOfNodes(TreeNode* root) {
+	if (root == nullptr) {
+		return 0;
+	}
+	return root->val + getSumOfNodes(root->left) + getSumOfNodes(root->right);
+}
+
 /*int main() {
 
 	string buffer;
