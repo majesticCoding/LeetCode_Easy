@@ -26,10 +26,3 @@ TreeNode* sortedArrayToBST(vector<int>& nums) {
 	return t;
 }
 
-int main() {
-	
-	vector<int> a = {-10, -3, 0, 5, 9};
-	preOrderTraversal(sortedArrayToBST(a));
-	_getch();
-	return 0;
-}
