@@ -29,11 +29,11 @@ vector<int> getRow(int rowIndex) {
 	return nums;
 }
 
-int main() {
+/*int main() {
 	vector<int> nums = getRow(3);
 	for (int i = 0; i < nums.size(); i++) {
 		cout << nums[i] << " ";
 	}
 	_getch();
 	return 0;
-}
+}*/
