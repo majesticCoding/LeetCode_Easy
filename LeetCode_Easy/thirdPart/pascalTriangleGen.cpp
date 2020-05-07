@@ -42,7 +42,7 @@ vector<vector<int>> generate(int numRows) {
 	return nums;
 }
 
-int main() {
+/*int main() {
 	vector<vector<int>> nums = generate(0);
 	for (int i = 0; i < nums.size(); i++) {
 		for (int j = 0; j < nums[i].size(); j++) {
@@ -52,4 +52,4 @@ int main() {
 	}
 	_getch();
 	return 0;
-}
+}*/
