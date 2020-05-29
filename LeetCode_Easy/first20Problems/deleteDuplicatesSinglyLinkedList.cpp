@@ -3,6 +3,7 @@
 #include <vector>
 #include <conio.h>
 #include <string>
+#include <stdexcept>
 #include "singlyLinkedListAPI.h"
 
 using namespace std;
@@ -42,7 +43,7 @@ void printList(ListNode* head) {
 
 int popFront(ListNode** head) {
 	if (*head == nullptr) {
-		return NULL;
+		throw invalid_argument("the list is already empty!");
 	}
 	ListNode* tmp = *head;
 	int popedVal = tmp->val;
@@ -54,7 +55,7 @@ int popFront(ListNode** head) {
 
 int popBack(ListNode** head) {
 	if (*head == nullptr) {
-		return NULL;
+		throw invalid_argument("the list is already empty!");
 	}
 
 	int popedVal;
