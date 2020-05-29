@@ -9,7 +9,7 @@ using namespace std;
 
 int maxProfit(vector<int>& prices) {
 
-	if (!prices.size() || prices.size() == 1){
+	if (prices.size() <= 1){
 		return 0;
 	}
 
@@ -28,17 +28,15 @@ int maxProfit(vector<int>& prices) {
 
 int maxProfitFast(vector<int>& prices) {
 
-	if (!prices.size() || prices.size() == 1) {
+	if (!prices.size()) {
 		return 0;
 	}
 
-	int tmp = prices[0];
+	int min_price = prices[0];
 	int profit = 0;
 	for (int i = 0; i < prices.size(); i++) {
-		if (prices[i] < tmp) {
-			tmp = prices[i];
-		}
-		profit = max(profit, prices[i] - tmp);
+		min_price = min(min_price, prices[i]);
+		profit = max(profit, prices[i] - min_price);
 	}
 	return profit;
 }

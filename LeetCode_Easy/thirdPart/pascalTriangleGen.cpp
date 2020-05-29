@@ -23,20 +23,15 @@ vector<vector<int>> generate(int numRows) {
 
 	nums[1].push_back(1);
 	nums[1].push_back(1);
-	if (numRows == 2) {
-		return nums;
-	}
 
 	for (int i = 2; i < numRows; i++) {
-		nums[i].push_back(nums[i - 1][0]);
+		nums[i].push_back(1);
 		int pos = 0;
-		for (int j = 0; j < nums[i - 1].size() - 1; j++) {
-			if (pos + 1 >= nums[i - 1].size())
-				break;
+		while(pos < nums[i - 1].size() - 1){
 			nums[i].push_back(nums[i - 1][pos] + nums[i - 1][pos + 1]);
 			pos++;
 		}
-		nums[i].push_back(nums[i - 1][nums[i - 1].size() - 1]);
+		nums[i].push_back(1);
 	}
 
 	return nums;
