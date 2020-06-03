@@ -7,12 +7,12 @@
 
 using namespace std;
 
-void array2Tree(TreeNode** root, vector<int> nums, int index, int size) {
-	if (index < size) {
-		*root = new TreeNode(nums[index]);
-		array2Tree(&(*root)->left, nums, 2 * index + 1, size);
-		array2Tree(&(*root)->right, nums, 2 * index + 2, size);
-	}
+void array2Tree(TreeNode** root, vector<int>& nums, int index, int size) {
+	if (index >= size)
+		return;
+	*root = new TreeNode(nums[index]);
+	array2Tree(&(*root)->left, nums, 2 * index + 1, size);
+	array2Tree(&(*root)->right, nums, 2 * index + 2, size);
 }
 
 void inOrderTraversal(TreeNode* root) {
@@ -60,7 +60,7 @@ int getSumOfNodes(TreeNode* root) {
 	return root->val + getSumOfNodes(root->left) + getSumOfNodes(root->right);
 }
 
-/*int main() {
+int main() {
 
 	string buffer;
 	int tmp;
@@ -73,9 +73,8 @@ int getSumOfNodes(TreeNode* root) {
 	while (iss >> tmp) {
 		a.push_back(tmp);
 	}
-	array2Tree(&t1, a, 0, a.size());
 
-	TreeNode* t2 = nullptr;
+	/*TreeNode* t2 = nullptr;
 	cout << "enter the 2nd tree: ";
 	getline(cin, buffer);
 	a.clear();
@@ -85,8 +84,13 @@ int getSumOfNodes(TreeNode* root) {
 	}
 	array2Tree(&t2, a, 0, a.size());
 	
-	cout << isSameTree(t1, t2);
+	cout << isSameTree(t1, t2);*/
+
+	preOrderTraversal(t1);
+	cout << endl;
+	array2Tree(&t1, a, 0, a.size());
+	preOrderTraversal(t1);
 
 	_getch();
 	return 0;
-}*/
+}
